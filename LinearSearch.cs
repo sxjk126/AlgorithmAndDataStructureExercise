@@ -8,7 +8,7 @@ namespace AlgorithmAndDataStructureExercise
     /// A linear search library which implementing linear search algorithm.
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    class LinearSearch<T>
+    public class LinearSearch
     {
         /// <summary>
         /// A search method implementing linear search algorithm
@@ -17,7 +17,7 @@ namespace AlgorithmAndDataStructureExercise
         /// <param name="values">This is the Array you looking at</param>
         /// <param name="target">This is the value you looking for</param>
         /// <returns>Return the index of target value, if not found return -1.</returns>
-        public int Search<T>(T[] values, T target)
+        public static int Search<T>(T[] values, T target)
         {
             //initialize the target index to -1 and means we have not find the target value yet
             int targetIndex = -1;
