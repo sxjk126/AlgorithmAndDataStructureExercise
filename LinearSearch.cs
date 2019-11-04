@@ -8,7 +8,7 @@ namespace AlgorithmAndDataStructureExercise
     /// A linear search library which implementing linear search algorithm.
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public class LinearSearch
+    public class LinearSearch<T> where T : IEquatable<T>
     {
         /// <summary>
         /// A search method implementing linear search algorithm
@@ -24,7 +24,7 @@ namespace AlgorithmAndDataStructureExercise
             //Traverse the array
             for (int i = 0; targetIndex == -1 && i < values.Length; i++)
             {
-                if (Object.Equals(values[i], target))
+                if (values[i].Equals(target))
                 {
                     targetIndex = i;
                 }
