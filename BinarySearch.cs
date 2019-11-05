@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AlgorithmAndDataStructureExercise
 {
-    class BinarySearch<T> where T : IEquatable<T>, IComparable<T>
+    public class BinarySearch<T> where T : IEquatable<T>, IComparable<T>
     {
         public static int Search(T[] values, T target)
         {
