@@ -6,7 +6,7 @@ namespace AlgorithmAndDataStructureExercise
 {
     class BinarySearch<T> where T : IEquatable<T>, IComparable<T>
     {
-        public static int Search<T>(T[] values, T target)
+        public static int Search(T[] values, T target)
         {
             int start = 0;
             int end = values.Length - 1;
@@ -17,13 +17,16 @@ namespace AlgorithmAndDataStructureExercise
                 {
                     return middle;
                 }
-                else if (values[middle].CompareTo(target))
+                else if (values[middle].CompareTo(target) > 0)
                 {
-
+                    end = middle - 1;
+                }
+                else // if(values[middle].CompareTo(target) < 0)
+                {
+                    start = middle + 1;
                 }
             }
-            
-
+            return -1;
         }
     }
 }
